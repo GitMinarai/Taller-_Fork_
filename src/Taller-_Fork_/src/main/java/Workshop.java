@@ -144,7 +144,12 @@ public class Workshop {
     public int[] invertirArreglo(int[] arreglo) {
         // TODO: Implementar el método para invertir un arreglo.
         // Ejemplo: Si arreglo = [1, 2, 3, 4, 5], el resultado debería ser [5, 4, 3, 2, 1].
-        return new int[0];
+        int[] resultado = new int[arreglo.length];
+        int i = 0;
+        while (i < arreglo.length){
+            resultado[i] = arreglo[arreglo.length - 1 - i];
+            i++;}
+        return resultado;
     }
 
     // Método que ordena un arreglo en orden ascendente
