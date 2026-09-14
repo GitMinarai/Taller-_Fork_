@@ -144,19 +144,34 @@ public class Workshop {
     public int[] invertirArreglo(int[] arreglo) {
         // TODO: Implementar el método para invertir un arreglo.
         // Ejemplo: Si arreglo = [1, 2, 3, 4, 5], el resultado debería ser [5, 4, 3, 2, 1].
-        int[] resultado = new int[arreglo.length];
+        int[] respuesta = new int[arreglo.length];
         int i = 0;
         while (i < arreglo.length){
-            resultado[i] = arreglo[arreglo.length - 1 - i];
+            respuesta[i] = arreglo[arreglo.length - 1 - i];
             i++;}
-        return resultado;
+        return respuesta;
     }
 
     // Método que ordena un arreglo en orden ascendente
     public int[] ordenarArreglo(int[] arreglo) {
         // TODO: Implementar el método para ordenar un arreglo en orden ascendente.
         // Ejemplo: Si arreglo = [5, 4, 3, 2, 1], el resultado debería ser [1, 2, 3, 4, 5].
-        return new int[0];
+        int[] respuesta = new int[arreglo.length];
+        int i = 0;
+        while (i < arreglo.length){
+            respuesta[i] = arreglo[i];
+            i++;}
+        i = 0;
+        while (i < respuesta.length){
+            int j = i + 1;
+            while (j < respuesta.length){
+                if (respuesta[i] > respuesta[j]){
+                    int temporal = respuesta[i];
+                    respuesta[i] = respuesta[j];
+                    respuesta[j] = temporal;}
+                j++;}
+            i++;}
+        return respuesta;
     }
 
     // Método que elimina los duplicados de un arreglo
