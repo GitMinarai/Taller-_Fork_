@@ -241,7 +241,13 @@ public class Workshop {
     public int contarCaracteres(String cadena) {
         // TODO: Implementar el método para contar el número de caracteres en una cadena.
         // Ejemplo: Si cadena = "Hello", el resultado debería ser 5.
-        return 0;
+        int contador = 0;
+        int i = 0;
+        while (i < cadena.length()){
+            contador++;
+            i++;}
+        return contador;
+        //Con este no pude.
     }
 
     // Método que invierte una cadena
