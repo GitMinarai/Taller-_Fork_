@@ -412,7 +412,48 @@ public class Workshop {
     public String convertirAHexadecimal(int numero) {
         // TODO: Implementar el método para convertir un número en su representación hexadecimal.
         // Ejemplo: Si numero = 255, el resultado debería ser "FF".
-        return "";
+        if (numero == 0){
+            return "0";}
+        if (numero < 0){
+            numero = numero * -1;
+            String respuesta = "";
+            while (numero > 0){
+                int residuo = numero - (numero / 16) * 16;
+                if (residuo == 10){
+                    respuesta = "A" + respuesta;}
+                else if (residuo == 11){
+                    respuesta = "B" + respuesta;}
+                else if (residuo == 12){
+                    respuesta = "C" + respuesta;}
+                else if (residuo == 13){
+                    respuesta = "D" + respuesta;}
+                else if (residuo == 14){
+                    respuesta = "E" + respuesta;}
+                else if (residuo == 15){
+                    respuesta = "F" + respuesta;}
+                else{
+                    respuesta = residuo + respuesta;}
+                numero = numero / 16;}
+            return "-" + respuesta;}
+        String resultado = "";
+        while (numero > 0){
+            int residuo = numero - (numero / 16) * 16;
+            if (residuo == 10){
+                resultado = "A" + resultado;}
+            else if (residuo == 11){
+                resultado = "B" + resultado;}
+            else if (residuo == 12){
+                resultado = "C" + resultado;}
+            else if (residuo == 13){
+                resultado = "D" + resultado;}
+            else if (residuo == 14){
+                resultado = "E" + resultado;}
+            else if (residuo == 15){
+                resultado = "F" + resultado;}
+            else{
+                resultado = residuo + resultado;}
+            numero = numero / 16;}
+        return resultado;
     }
 
     // Método para el juego de piedra, papel, tijera, lagarto, Spock
