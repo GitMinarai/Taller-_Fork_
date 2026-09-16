@@ -337,7 +337,38 @@ public class Workshop {
     public boolean validarCorreoElectronico(String correo) {
         // TODO: Implementar el método para validar un correo electrónico.
         // Ejemplo: Si correo = "test@example.com", el resultado debería ser true.
-        return false;
+        int posicionArroba = -1;
+        int i = 0;
+        while (i < correo.length()){
+            String letra = correo.substring(i, i + 1);
+            if (letra.equals("@")){
+                if (posicionArroba != -1){
+                    return false;}
+                posicionArroba = i;}
+            i++;}
+        if (posicionArroba == -1){
+            return false;}
+        i = 0;
+        while (i < correo.length()) {
+            String letra = correo.substring(i, i + 1);
+            if (letra.equals(" ")){
+                return false;}
+            if (letra.equals("$")){
+                return false;}
+            if (letra.equals("%")){
+                return false;}
+            if (letra.equals("^")){
+                return false;}
+            if (letra.equals("&")){
+                return false;}
+            if (letra.equals("*")){
+                return false;}
+            if (letra.equals("(")){
+                return false;}
+            if (letra.equals(")")){
+                return false;}
+            i++;}
+        return true;
     }
 
     // Método que calcula el promedio de una lista de números
