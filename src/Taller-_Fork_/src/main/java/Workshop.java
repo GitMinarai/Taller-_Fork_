@@ -272,6 +272,7 @@ public class Workshop {
             if (cadena.charAt(i) != ' '){
                 mensaje = mensaje + cadena.charAt(i);}
             i++;}
+        mensaje = mensaje.toLowerCase();
         int inicio = 0;
         int fin = mensaje.length() - 1;
         while (inicio < fin) {
@@ -279,7 +280,7 @@ public class Workshop {
                 return false;}
             inicio++;
             fin--;}
-        return true;}
+        return true;
     }
 
     // Método que cuenta el número de palabras en una cadena
