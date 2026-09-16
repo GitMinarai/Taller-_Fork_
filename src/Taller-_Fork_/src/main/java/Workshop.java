@@ -325,6 +325,11 @@ public class Workshop {
     public int buscarSubcadena(String cadena, String subcadena) {
         // TODO: Implementar el método para buscar una subcadena en una cadena y retornar su índice.
         // Ejemplo: Si cadena = "Hello world" y subcadena = "world", el resultado debería ser 6.
+        int i = 0;
+        while (i <= cadena.length() - subcadena.length()){
+            if (cadena.substring(i, i + subcadena.length()).equals(subcadena)) {
+                return i;}
+            i++;}
         return -1;
     }
 
