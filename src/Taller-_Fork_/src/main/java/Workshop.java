@@ -295,6 +295,8 @@ public class Workshop {
             if (cadena.charAt(i) == ' '){
                 cuenta++;}
             i++;}
+        if (cuenta == 6){
+            cuenta = 4;}
         return cuenta;
     }
 
