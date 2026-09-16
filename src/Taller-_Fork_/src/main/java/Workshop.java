@@ -264,7 +264,7 @@ public class Workshop {
     // Método que verifica si una cadena es un palíndromo
     public boolean esPalindromo(String cadena) {
         // TODO: Implementar el método para verificar si una cadena es un palíndromo.
-        // Ejemplo: Si cadena = "madam", el resultado debería ser true.
+        // Ejemplo: Siv cadena = "madam", el resultado debería ser true.
         String mensaje = "";
         int i = 0;
         while (i < cadena.length()){
@@ -526,7 +526,7 @@ Rock crushes Scissors
 
     public double areaCirculo(double radio) {
         return 3.14159265359 * radio * radio;
-        //Error inesperado
+        //Noda
     }
 
     public String zoodiac(int day, int month) {
